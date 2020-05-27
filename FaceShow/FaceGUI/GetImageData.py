@@ -200,6 +200,10 @@ def showFaceRead(img_path):
 # 主函数
 def Main(img_path):
     names = []
+    dirs = ['UnknownFace','UnknownFaceData','KnownFaceData','KnownImage']
+    for i in dirs:
+        if not os.path.exists(i):
+            os.makedirs(i)
     for i,num in enumerate(os.listdir('UnknownFace')):
         reMatch = '_' + str(i) + '.jpg' + '|_' + str(i) + '.png'
         names.append(re.sub(reMatch, "", num))
