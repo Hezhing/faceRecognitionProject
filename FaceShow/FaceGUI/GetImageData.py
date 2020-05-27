@@ -166,14 +166,12 @@ def showFaceRead(img_path):
     for (top,right,bottom,left),face_encoding in zip(face_locations,face_encodings):
 
         matches = face_recognition.compare_faces(known_face_encodings,face_encoding,tolerance=0.445)
-        print(matches)
         name = 'Unknown'
 
         for index, value in enumerate(matches):
             if value == True:
                 match_index = index
                 name = names[match_index]
-        print(name)
 
 
         print(
