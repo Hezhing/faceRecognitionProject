@@ -1,5 +1,5 @@
 face_recognition==1.2.3
 numpy==1.12.1
 opencv_python==4.1.2.30
-Pillow==7.1.2
+Pillow==9.0.0
 PyQt5==5.14.2
